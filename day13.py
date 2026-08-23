@@ -47,8 +47,7 @@ def generate_qa(text: str) -> str:
 text = """
 Python là một ngôn ngữ lập trình cấp cao.
 Python có cú pháp dễ đọc.
-Python được sử dụng trong phát triển web,
-trí tuệ nhân tạo và phân tích dữ liệu.
+Python được sử dụng trong phát triển web, trí tuệ nhân tạo và phân tích dữ liệu.
 """
 
 result = generate_qa(text)
