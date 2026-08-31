@@ -109,7 +109,22 @@ def main() -> None:
             chunk,
             num_questions=args.questions_per_chunk,
         )
+
+        if not chunk_qa_pairs:
+            logger.error("API key lỗi hoặc hết quota. Dừng chương trình.")
+            break
+
         qa_pairs.extend(chunk_qa_pairs)
+
+        write_jsonl(
+            to_alpaca_format(qa_pairs),
+            output_dir / "qa_dataset.jsonl",
+        )
+
+        logger.info(
+            "Đã lưu %s Q&A",
+            len(qa_pairs),
+        )
 
     logger.info("Đã sinh %s cặp Q&A", len(qa_pairs))
 
