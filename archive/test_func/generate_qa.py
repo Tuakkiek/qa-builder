@@ -30,8 +30,7 @@ def generate_qa(text: str) -> str:
     #trả về đối tượng response nhận được.
     return response
 
-#gọi thử hàm với câu hỏi mẫu "BFS là gì?".
-result = generate_qa("BFS là gì?")
+result = generate_qa("DFS là gì?")
 
 #in ra kết quả trả về từ api.
 print(result)
