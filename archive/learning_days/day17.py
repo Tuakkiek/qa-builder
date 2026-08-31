@@ -2,8 +2,11 @@
 from sentence_transformers import SentenceTransformer, util
 
 
-#khởi tạo model AI pre-trained có tên "all-MiniLM-L6-v2" (một model nhẹ, chạy nhanh chuyên dùng để tạo vector).
-model = SentenceTransformer("all-MiniLM-L6-v2")
+#model cũ:
+# model = SentenceTransformer("all-MiniLM-L6-v2")
+
+#model embedding (new)
+model = SentenceTransformer("paraphrase-multilingual-MiniLM-L12-v2")
 
 
 #tạo list chứa 3 câu mẫu để test độ tương đồng (câu 1 và 2 giống ý nhau, câu 3 khác chủ đề).

@@ -9,7 +9,10 @@ def is_question_long_enough(question: str, min_words: int = 5) -> bool:
 def load_embedding_model():
     from sentence_transformers import SentenceTransformer
 
-    return SentenceTransformer("all-MiniLM-L6-v2")
+    # return SentenceTransformer("all-MiniLM-L6-v2")
+    return SentenceTransformer("paraphrase-multilingual-MiniLM-L12-v2")
+
+
 
 
 def remove_duplicate_qa(
