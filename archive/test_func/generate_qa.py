@@ -20,6 +20,6 @@ def generate_qa(text: str) -> str:
 
     return response
 
-result = generate_qa("BFS là gì?")
+result = generate_qa("DFS là gì?")
 
 print(result)
